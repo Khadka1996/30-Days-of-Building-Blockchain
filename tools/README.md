@@ -24,3 +24,4 @@ npx hardhat test
 ## Other files
 - [`card/`](card/): daily LinkedIn card template and design rules
 - [`post-style.md`](post-style.md): daily LinkedIn post style
+- [`daily-build.md`](daily-build.md): the step-by-step daily build process
