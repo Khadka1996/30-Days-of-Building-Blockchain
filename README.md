@@ -4,6 +4,8 @@ Part 2 of my blockchain journey. In [Part 1 — Learning Blockchain in 15 Days](
 
 Now I **build**: one small, complete, tested project every day for 30 days, going from very simple to complex, and finishing with one real app for Nepal.
 
+**Dates:** Day 1 is 31 October 2026 · Day 30 is 29 November 2026 · a new project every day at 5:30 pm Nepal time
+
 **Author:** [Manish Khadka](https://khadka-manish.com.np) · [LinkedIn](https://www.linkedin.com/in/manishkhadka1996) · [GitHub](https://github.com/Khadka1996)
 
 ![30 Days of Building Blockchain — roadmap](roadmap/roadmap.png)
