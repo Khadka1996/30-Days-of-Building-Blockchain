@@ -2,80 +2,121 @@
 
 Part 2 of my blockchain journey. In [Part 1 — Learning Blockchain in 15 Days](https://github.com/Khadka1996/Learning-Blockchain) I learned the concepts, from a single hash to a full-stack dApp ([free 84-page study guide](https://github.com/Khadka1996/Learning-Blockchain/tree/main/guide)).
 
-Now I **build**: one small, complete, tested project every day for 30 days, going from very simple to complex.
+Now I **build**: one small, complete, tested project every day for 30 days, going from very simple to complex, and finishing with one real app for Nepal.
 
 **Author:** [Manish Khadka](https://khadka-manish.com.np) · [LinkedIn](https://www.linkedin.com/in/manishkhadka1996) · [GitHub](https://github.com/Khadka1996)
 
+![30 Days of Building Blockchain — roadmap](roadmap/roadmap.png)
+
 ---
+
+## At a glance
+
+| | Days | Focus | Level |
+|---|---|---|:---:|
+| **Week 1** | 1–7 | Solidity basics: small contracts, access control, sending ETH safely | 🟢 |
+| **Week 2** | 8–14 | Tokens and NFTs as real products | 🟡 |
+| **Week 3** | 15–21 | DeFi: staking, lending, swaps, stablecoins, vaults, security | 🟠 |
+| **Week 4** | 22–27 | Full-stack dApps: web apps, wallet login, gasless, Layer 2 | 🔴 |
+| **Capstone** | 28–30 | One complete dApp for a real problem in Nepal | ⭐ |
+
+**30 days · 27 projects · 1 capstone app**
 
 ## How every day works
 
 1. **Build:** one focused project with clean, commented code.
 2. **Test:** unit tests, plus fuzz and invariant tests where they matter.
 3. **Attack and fix:** a security review of the day's code; every bug found is fixed and proven with a test (`QA.md`).
-4. **Share:** a short LinkedIn post at 5:30 pm Nepal time, explaining in simple words what I built.
+4. **Explain:** a short README in plain words: what it does, how it works, what I learned.
+5. **Share:** a daily LinkedIn post with a simple card.
 
-## Roadmap
+## Full roadmap
 
-![30 Days of Building Blockchain — roadmap](roadmap/roadmap.png)
+More detail for every day (new skills and security focus): **[ROADMAP.md](ROADMAP.md)**
 
-Full details for every day (what I build, new skills, security focus): **[ROADMAP.md](ROADMAP.md)**
+### Week 1 — Solidity building blocks 🟢
 
-| Day | Project | Status |
-|----:|---------|:------:|
-| **Week 1 — Solidity building blocks** | | |
-| 01 | To-do list on the blockchain | ⏳ |
-| 02 | Piggy bank with a time lock | ⏳ |
-| 03 | Voting app | ⏳ |
-| 04 | Multisig wallet (2-of-3 approvals) | ⏳ |
-| 05 | Escrow between a buyer and a seller | ⏳ |
-| 06 | Crowdfunding with refunds | ⏳ |
-| 07 | Week 1 recap: deploy and review everything | ⏳ |
-| **Week 2 — Tokens and NFTs as products** | | |
-| 08 | My own token with a faucet | ⏳ |
-| 09 | Token vesting for a team | ⏳ |
-| 10 | Airdrop with Merkle proofs | ⏳ |
-| 11 | NFT collection with an allowlist | ⏳ |
-| 12 | NFT marketplace | ⏳ |
-| 13 | Auction (English and Dutch) | ⏳ |
-| 14 | DAO: members vote with tokens | ⏳ |
-| **Week 3 — DeFi** | | |
-| 15 | Staking with rewards | ⏳ |
-| 16 | Simple lending pool | ⏳ |
-| 17 | Token swap with a router | ⏳ |
-| 18 | Flash loans | ⏳ |
-| 19 | A simple stablecoin | ⏳ |
-| 20 | Yield vault (ERC-4626) | ⏳ |
-| 21 | Security day: attacking Week 3 with Foundry | ⏳ |
-| **Week 4 — Full-stack dApps** | | |
-| 22 | Next.js dApp with wagmi / viem | ⏳ |
-| 23 | Reading and indexing blockchain events | ⏳ |
-| 24 | Sign in with Ethereum | ⏳ |
-| 25 | Gasless transactions | ⏳ |
-| 26 | Deploying to a Layer 2 test network | ⏳ |
-| 27 | Cross-chain basics | ⏳ |
-| 28 | Upgrades and monitoring a live contract | ⏳ |
-| **Capstone** | | |
-| 29 | Capstone, part 1: a dApp for a real Nepal problem | ⏳ |
-| 30 | Capstone, part 2: audit, demo and wrap-up | ⏳ |
+| Day | Project | What I build | Status |
+|----:|---------|--------------|:------:|
+| 01 | To-do list | Add, complete and delete tasks; only you can edit your list | ⏳ |
+| 02 | Piggy bank with a time lock | Deposit ETH; withdraw only after an unlock date | ⏳ |
+| 03 | Voting app | Polls with one vote per address and a deadline | ⏳ |
+| 04 | Multisig wallet | 3 owners; any payment needs 2 approvals | ⏳ |
+| 05 | Escrow | Money held safely until the buyer receives the item | ⏳ |
+| 06 | Crowdfunding | Reach the goal or every backer gets a refund | ⏳ |
+| 07 | Week 1 recap + deploy kit | Review the week; deploy script and Etherscan verification | ⏳ |
+
+### Week 2 — Tokens and NFTs as products 🟡
+
+| Day | Project | What I build | Status |
+|----:|---------|--------------|:------:|
+| 08 | My own token + faucet | An ERC-20 token and a once-a-day faucet | ⏳ |
+| 09 | Token vesting | Team tokens unlock slowly over 12 months | ⏳ |
+| 10 | Airdrop with Merkle proofs | 1,000 people can claim; one hash stored on-chain | ⏳ |
+| 11 | NFT collection | Allowlist mint, public sale, max supply | ⏳ |
+| 12 | NFT marketplace | List, buy and cancel; creators get royalties | ⏳ |
+| 13 | Auction | English (rising) and Dutch (falling price) auctions | ⏳ |
+| 14 | DAO | Token holders vote; passed proposals run after a delay | ⏳ |
+
+### Week 3 — DeFi 🟠
+
+Simplified teaching versions; each README explains what a real protocol adds.
+
+| Day | Project | What I build | Status |
+|----:|---------|--------------|:------:|
+| 15 | Staking with rewards | Lock tokens, earn rewards every second | ⏳ |
+| 16 | Mini lending pool | Deposit, borrow against collateral, liquidations | ⏳ |
+| 17 | Swap with a router | Swap pools and multi-hop routes A → B → C | ⏳ |
+| 18 | Flash loans | Borrow and repay in one transaction | ⏳ |
+| 19 | Mini stablecoin | Lock ETH, mint a dollar-pegged coin | ⏳ |
+| 20 | Yield vault | ERC-4626 vault that shares profit fairly | ⏳ |
+| 21 | Security & upgrades day | Fuzz and invariant attacks on Week 3; a safe UUPS upgrade | ⏳ |
+
+### Week 4 — Full-stack dApps 🔴
+
+| Day | Project | What I build | Status |
+|----:|---------|--------------|:------:|
+| 22 | Next.js dApp | A web app for the Week 1 contracts with wallet connect | ⏳ |
+| 23 | Reading events | A live activity feed and simple indexer | ⏳ |
+| 24 | Sign in with Ethereum | Log in with a wallet instead of a password | ⏳ |
+| 25 | Gasless transactions | Users act without ETH; a relayer pays the gas | ⏳ |
+| 26 | Layer 2 & cross-chain | Compare costs on two chains and send messages between them | ⏳ |
+| 27 | Monitoring & alerts | A dashboard that watches a contract and flags unusual activity | ⏳ |
+
+### Days 28–30 — Capstone ⭐
+
+| Day | Project | What I build | Status |
+|----:|---------|--------------|:------:|
+| 28 | Capstone, part 1 | Design and contracts for a dApp for a real problem in Nepal | ⏳ |
+| 29 | Capstone, part 2 | The web app, end-to-end tests and a deploy kit | ⏳ |
+| 30 | Capstone, part 3 | Self-audit, live demo on a test network, 30-day wrap-up | ⏳ |
+
+## How it runs
+
+- Every project is built and tested on a **local blockchain (Hardhat)**, so every result is real and repeatable.
+- **Live test-network deployments** (Sepolia) are done from my own laptop with a test-only wallet and free faucet ETH. No real money, and no private keys in this repository.
+- **Foundry** is practised on my own machine; the daily runs use Hardhat with fast-check fuzzing.
 
 ## Repository structure
 
 ```
 30-Days-of-Building-Blockchain/
+├── ROADMAP.md         # detailed plan for every day
+├── roadmap/           # roadmap banner
 ├── day-01/            # one folder per day
 │   ├── README.md      # what I built, how it works, results
 │   ├── contracts/     # Solidity
 │   ├── test/          # tests
-│   └── QA.md          # security review: bugs found → fixes
+│   ├── QA.md          # security review: bugs found → fixes
+│   └── card/          # the day's LinkedIn card
 ├── ...
-└── tools/             # shared templates (LinkedIn card, post style)
+└── tools/             # shared templates (card design, post style)
 ```
 
 ## Tech stack
 
-Solidity · Foundry · Hardhat · OpenZeppelin · Next.js · wagmi / viem · Sepolia and Layer 2 test networks (no real money)
+Solidity · Hardhat · OpenZeppelin · ethers.js · fast-check · Next.js · wagmi / viem · Sepolia test network (no real money)
 
 ## Follow along
 
-A new project every day at 5:30 pm Nepal time on [LinkedIn](https://www.linkedin.com/in/manishkhadka1996).
+A new project every day on [LinkedIn](https://www.linkedin.com/in/manishkhadka1996).
