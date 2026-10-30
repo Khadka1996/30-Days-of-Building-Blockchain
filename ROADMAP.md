@@ -1,0 +1,84 @@
+# 30 Days of Building Blockchain — Detailed Roadmap
+
+One small, complete, tested project every day, from very simple to complex. Each day builds on the days before it.
+
+**Every day includes:** working code · tests · a security review (bugs found → fixed → proven with a test) · a short README in plain words · a LinkedIn post at 5:30 pm Nepal time.
+
+**Difficulty:** 🟢 easy · 🟡 medium · 🟠 hard · 🔴 advanced
+
+---
+
+## Week 1 — Solidity building blocks 🟢
+
+Goal: write small contracts with confidence: storage, access control, sending ETH safely, and time.
+
+| Day | Project | What I build | New skills | Security focus |
+|----:|---------|--------------|------------|----------------|
+| 01 | **To-do list** | Add, complete and delete tasks; each user has a private list | Structs, arrays, mappings, events, first Foundry tests | Only the owner can edit a list |
+| 02 | **Piggy bank with a time lock** | Deposit ETH; withdraw only after an unlock date | `block.timestamp`, payable functions, sending ETH | Safe withdrawals (checks → effects → interaction) |
+| 03 | **Voting app** | Create a poll, one vote per address, show the winner | Enums, modifiers, deadlines | Double voting, voting after the deadline |
+| 04 | **Multisig wallet** | 3 owners; any payment needs 2 approvals | Proposals, approvals, executing calls | Replay, approving twice, removed owners |
+| 05 | **Escrow** | Buyer pays into escrow; released on delivery or refunded on dispute | State machines, a neutral arbiter | Stuck funds, wrong person releasing |
+| 06 | **Crowdfunding** | Set a goal and a deadline; creator claims if met, backers refunded if not | Goals, deadlines, pull-payment refunds | Refund loops, claiming twice |
+| 07 | **Week 1 recap** | Deploy all six to the Sepolia test network, verify on Etherscan | Deploy scripts, contract verification, `.env` secrets | Review of the whole week |
+
+## Week 2 — Tokens and NFTs as products 🟡
+
+Goal: use the token standards to build things people actually use.
+
+| Day | Project | What I build | New skills | Security focus |
+|----:|---------|--------------|------------|----------------|
+| 08 | **My own token + faucet** | An ERC-20 token and a faucet that gives a little to each address once a day | OpenZeppelin ERC-20, rate limits | Faucet draining with many addresses |
+| 09 | **Token vesting** | Team tokens unlock slowly over 12 months, with a cliff | Linear vesting maths, time | Rounding errors, early claims |
+| 10 | **Airdrop with Merkle proofs** | 1,000 addresses can claim; only one root stored on-chain | Merkle trees, proof verification | Claiming twice, fake proofs |
+| 11 | **NFT collection** | Mint with an allowlist, a public sale and a max supply | ERC-721, metadata, allowlists | Minting past the limit, bots |
+| 12 | **NFT marketplace** | List, buy and cancel NFTs; the creator gets a royalty | Approvals, ERC-2981 royalties | Selling NFTs you no longer own |
+| 13 | **Auction** | English (rising bids) and Dutch (falling price) auctions | Bidding logic, refunds | Front-running, refund denial-of-service |
+| 14 | **DAO** | Members vote with tokens; passed proposals run after a delay | Governor, timelock, voting power | Flash-loan voting, proposal spam |
+
+## Week 3 — DeFi 🟠
+
+Goal: understand how money apps work by building small versions of them.
+
+| Day | Project | What I build | New skills | Security focus |
+|----:|---------|--------------|------------|----------------|
+| 15 | **Staking with rewards** | Lock tokens, earn rewards per second | Reward-per-token maths | Reward rounding, staking just before payout |
+| 16 | **Lending pool** | Deposit to earn interest; borrow against collateral; liquidations | Collateral ratios, interest rates | Bad debt, price manipulation |
+| 17 | **Swap with a router** | A swap pool plus a router that finds the path A → B → C | AMM maths, multi-hop swaps | Slippage, sandwich attacks |
+| 18 | **Flash loans** | Borrow and repay in one transaction; an arbitrage example | ERC-3156, callbacks | Using flash loans to attack other contracts |
+| 19 | **A simple stablecoin** | Lock ETH, mint a dollar-pegged coin, get liquidated if it falls too low | Price oracles, over-collateralisation | Stale prices, depeg |
+| 20 | **Yield vault** | Deposit tokens; the vault invests them and shares the profit | ERC-4626 shares | The first-depositor inflation attack |
+| 21 | **Security day** | Attack all of Week 3 with fuzz and invariant tests | Foundry fuzzing, invariants | Everything from the week |
+
+## Week 4 — Full-stack dApps 🔴
+
+Goal: turn contracts into real apps people can use in a browser.
+
+| Day | Project | What I build | New skills | Security focus |
+|----:|---------|--------------|------------|----------------|
+| 22 | **Next.js dApp** | A web front end for the Week 1 contracts with wallet connect | Next.js, wagmi, viem | Wrong network, rejected transactions |
+| 23 | **Reading events** | A live activity feed and simple indexer | Event logs, filters, indexing | Chain reorganisations, missed events |
+| 24 | **Sign in with Ethereum** | Log in with a wallet instead of a password | EIP-4361, signatures, sessions | Signature replay, phishing |
+| 25 | **Gasless transactions** | Users act without holding ETH; a relayer pays the gas | EIP-712 signed messages, meta-transactions | Relayer abuse, nonce reuse |
+| 26 | **Layer 2 deploy** | Deploy to a Layer 2 test network; compare the costs | L2 networks, gas comparison | Bridge and sequencer risks |
+| 27 | **Cross-chain basics** | Send a message or token between two test chains | Cross-chain messaging | Replay across chains |
+| 28 | **Upgrades and monitoring** | Upgrade a live contract safely and watch it for problems | UUPS proxies, alerts | Storage layout clashes, admin keys |
+
+## Days 29–30 — Capstone 🔴
+
+| Day | Project | What I build |
+|----:|---------|--------------|
+| 29 | **Capstone, part 1** | A complete dApp for a real problem in Nepal: contracts, web app and tests, deployed on a test network |
+| 30 | **Capstone, part 2** | Full self-audit report, a demo, and a wrap-up with everything learned in 30 days |
+
+---
+
+## What I will have after 30 days
+
+- About **30 working projects**, each tested and reviewed
+- Real deployments on test networks, verified on Etherscan
+- New skills: **Foundry**, **wagmi / viem**, **Layer 2**, **DeFi maths** and **security testing**
+- One capstone app that solves a real problem
+- A complete PDF guide of all 30 days
+
+Part 1 (learning the concepts): [Learning Blockchain in 15 Days](https://github.com/Khadka1996/Learning-Blockchain)

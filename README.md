@@ -17,6 +17,10 @@ Now I **build**: one small, complete, tested project every day for 30 days, goin
 
 ## Roadmap
 
+![30 Days of Building Blockchain — roadmap](roadmap/roadmap.png)
+
+Full details for every day (what I build, new skills, security focus): **[ROADMAP.md](ROADMAP.md)**
+
 | Day | Project | Status |
 |----:|---------|:------:|
 | **Week 1 — Solidity building blocks** | | |
