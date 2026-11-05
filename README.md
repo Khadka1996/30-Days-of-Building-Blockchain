@@ -45,7 +45,7 @@ More detail for every day (new skills and security focus): **[ROADMAP.md](ROADMA
 | 03 | [Voting app](day-03) | Polls with one vote per address and a deadline | ✅ |
 | 04 | [Multisig wallet](day-04) | 3 owners; any payment needs 2 approvals | ✅ |
 | 05 | Escrow | Money held safely until the buyer receives the item | ⏳ |
-| 06 | Crowdfunding | Reach the goal or every backer gets a refund | ⏳ |
+| 06 | [Crowdfunding](day-06) | Reach the goal or every backer gets a refund | ✅ |
 | 07 | Week 1 recap + deploy kit | Review the week; deploy script and Etherscan verification | ⏳ |
 
 ### Week 2 — Tokens and NFTs as products 🟡

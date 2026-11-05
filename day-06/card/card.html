@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1350px;font-family:Inter,Arial,sans-serif;padding:80px;display:flex;flex-direction:column;
+  --bg:#0B1F3A;--ink:#FFFFFF;--soft:#C7D2E3;--accent:#F59E0B;--panel:#13294A;--line:#22406B;--muted:#8FA3C2;
+  background:var(--bg);color:var(--ink)}
+body.light{--bg:#FFFFFF;--ink:#0B1F3A;--soft:#334155;--accent:#D97706;--panel:#F4F6FA;--line:#E2E8F0;--muted:#64748B}
+.top{display:flex;align-items:center;justify-content:space-between}
+.day{background:var(--accent);color:#0B1F3A;font-weight:800;font-size:40px;padding:14px 30px;border-radius:16px;letter-spacing:1px}
+.series{font-size:28px;font-weight:600;color:var(--muted);text-align:right;line-height:1.3}
+h1{font-size:96px;line-height:1.05;font-weight:800;letter-spacing:-2px;margin-top:70px}
+h1 em{font-style:normal;color:var(--accent)}
+.panel{margin-top:64px;background:var(--panel);border:2px solid var(--line);border-radius:28px;padding:40px 48px}
+.row{display:flex;align-items:center;gap:28px;font-size:40px;font-weight:600;color:var(--ink);padding:16px 0}
+.row + .row{border-top:2px solid var(--line)}
+.n{flex:0 0 64px;height:64px;border-radius:32px;background:var(--accent);color:#0B1F3A;font-weight:800;font-size:34px;display:flex;align-items:center;justify-content:center}
+.foot{margin-top:auto;display:flex;align-items:center;gap:28px}
+.ring{flex:0 0 110px;height:110px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:flex;align-items:center;justify-content:center}
+.ring span{width:84px;height:84px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:28px;color:var(--ink)}
+.who{font-size:30px;line-height:1.4}
+.who b{display:block;font-size:34px}
+.who span{color:var(--muted)}
+</style></head><body class="dark">
+<div class="top">
+  <div class="day">DAY 06 / 30</div>
+  <div class="series">30 Days of<br>Building Blockchain</div>
+</div>
+<h1>I built<br><em>crowdfunding</em>:<br>goal met or <em>refunds</em></h1>
+<div class="panel">
+  <div class="row"><div class="n">1</div>Creator claims exactly once</div>
+  <div class="row"><div class="n">2</div>Backers pull their own refunds</div>
+  <div class="row"><div class="n">3</div>27 tests pass ✓</div>
+</div>
+<div class="foot">
+  <div class="ring" style="--p:20"><span>6/30</span></div>
+  <div class="who"><b>Manish Khadka</b><span>github.com/Khadka1996</span></div>
+</div>
+</body></html>
