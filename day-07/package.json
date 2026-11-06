@@ -1,0 +1,35 @@
+{
+  "name": "day-07-week1-deploy-kit",
+  "version": "1.0.0",
+  "description": "Day 7: Week 1 recap and a Sepolia deploy kit (deploy, resume, verify, check) for all six Week 1 contracts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "lint": "solhint \"contracts/**/*.sol\"",
+    "demo": "hardhat run scripts/demo.js",
+    "slither": "slither . --hardhat-ignore-compile",
+    "deploy:local": "hardhat run scripts/deploy.js",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "verify:sepolia": "hardhat run scripts/verify.js --network sepolia",
+    "check:sepolia": "hardhat run scripts/check.js --network sepolia"
+  },
+  "author": "Manish Khadka",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.2",
+    "@nomicfoundation/hardhat-ethers": "^3.1.3",
+    "@nomicfoundation/hardhat-network-helpers": "^1.1.2",
+    "@nomicfoundation/hardhat-verify": "^2.1.3",
+    "chai": "^4.5.0",
+    "dotenv": "^16.6.1",
+    "ethers": "^6.17.0",
+    "fast-check": "^3.23.2",
+    "hardhat": "^2.22.17",
+    "solc": "^0.8.24",
+    "solhint": "^5.2.0"
+  },
+  "private": true
+}

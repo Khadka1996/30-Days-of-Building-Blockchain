@@ -1,0 +1,4 @@
+# Local-chain records change every run; only Sepolia records are worth keeping.
+deployments/hardhat.*
+deployments/localhost.*
+deployments/*.tmp
