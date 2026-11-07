@@ -1,0 +1,29 @@
+{
+  "name": "day-08-token-faucet",
+  "version": "1.0.0",
+  "description": "Day 8: my own ERC-20 token and a once-a-day faucet with a daily budget against many-address draining",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "lint": "solhint \"contracts/**/*.sol\"",
+    "demo": "hardhat run scripts/demo.js",
+    "slither": "slither . --hardhat-ignore-compile"
+  },
+  "author": "Manish Khadka",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.2",
+    "@nomicfoundation/hardhat-ethers": "^3.1.3",
+    "@nomicfoundation/hardhat-network-helpers": "^1.1.2",
+    "chai": "^4.5.0",
+    "ethers": "^6.17.0",
+    "fast-check": "^3.23.2",
+    "hardhat": "^2.22.17",
+    "solc": "^0.8.24",
+    "solhint": "^5.2.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+}

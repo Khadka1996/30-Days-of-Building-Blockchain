@@ -52,7 +52,7 @@ More detail for every day (new skills and security focus): **[ROADMAP.md](ROADMA
 
 | Day | Project | What I build | Status |
 |----:|---------|--------------|:------:|
-| 08 | My own token + faucet | An ERC-20 token and a once-a-day faucet | ⏳ |
+| 08 | [My own token + faucet](day-08) | An ERC-20 token and a once-a-day faucet | ✅ |
 | 09 | Token vesting | Team tokens unlock slowly over 12 months | ⏳ |
 | 10 | Airdrop with Merkle proofs | 1,000 people can claim; one hash stored on-chain | ⏳ |
 | 11 | NFT collection | Allowlist mint, public sale, max supply | ⏳ |
