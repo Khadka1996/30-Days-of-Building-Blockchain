@@ -67,7 +67,7 @@ Simplified teaching versions; each README explains what a real protocol adds.
 | Day | Project | What I build | Status |
 |----:|---------|--------------|:------:|
 | 15 | [Staking with rewards](day-15) | Lock tokens, earn rewards every second | ✅ |
-| 16 | Mini lending pool | Deposit, borrow against collateral, liquidations | ⏳ |
+| 16 | [Mini lending pool](day-16) | Deposit, borrow against collateral, liquidations | ✅ |
 | 17 | Swap with a router | Swap pools and multi-hop routes A → B → C | ⏳ |
 | 18 | Flash loans | Borrow and repay in one transaction | ⏳ |
 | 19 | Mini stablecoin | Lock ETH, mint a dollar-pegged coin | ⏳ |
