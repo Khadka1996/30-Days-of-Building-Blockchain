@@ -68,7 +68,7 @@ Simplified teaching versions; each README explains what a real protocol adds.
 |----:|---------|--------------|:------:|
 | 15 | [Staking with rewards](day-15) | Lock tokens, earn rewards every second | ✅ |
 | 16 | [Mini lending pool](day-16) | Deposit, borrow against collateral, liquidations | ✅ |
-| 17 | Swap with a router | Swap pools and multi-hop routes A → B → C | ⏳ |
+| 17 | [Swap with a router](day-17) | Swap pools and multi-hop routes A → B → C | ✅ |
 | 18 | Flash loans | Borrow and repay in one transaction | ⏳ |
 | 19 | Mini stablecoin | Lock ETH, mint a dollar-pegged coin | ⏳ |
 | 20 | Yield vault | ERC-4626 vault that shares profit fairly | ⏳ |
