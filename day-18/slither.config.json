@@ -1,0 +1,4 @@
+{
+  "filter_paths": "contracts/test|contracts/attack|NaiveBonus|HimalPair|HimalRouter|HimalFactory|HimalToken.sol|node_modules",
+  "detectors_to_exclude": "timestamp,calls-loop"
+}
