@@ -71,7 +71,7 @@ Simplified teaching versions; each README explains what a real protocol adds.
 | 17 | [Swap with a router](day-17) | Swap pools and multi-hop routes A → B → C | ✅ |
 | 18 | [Flash loans](day-18) | Borrow and repay in one transaction | ✅ |
 | 19 | [Mini stablecoin](day-19) | Lock ETH, mint a dollar-pegged coin | ✅ |
-| 20 | Yield vault | ERC-4626 vault that shares profit fairly | ⏳ |
+| 20 | [Yield vault](day-20) | ERC-4626 vault that shares profit fairly | ✅ |
 | 21 | Security & upgrades day | Fuzz and invariant attacks on Week 3; a safe UUPS upgrade | ⏳ |
 
 ### Week 4 — Full-stack dApps 🔴
