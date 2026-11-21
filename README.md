@@ -78,7 +78,7 @@ Simplified teaching versions; each README explains what a real protocol adds.
 
 | Day | Project | What I build | Status |
 |----:|---------|--------------|:------:|
-| 22 | Next.js dApp | A web app for the Week 1 contracts with wallet connect | ⏳ |
+| 22 | [Next.js dApp](day-22) | A web app for the Week 1 contracts with wallet connect | ✅ |
 | 23 | Reading events | A live activity feed and simple indexer | ⏳ |
 | 24 | Sign in with Ethereum | Log in with a wallet instead of a password | ⏳ |
 | 25 | Gasless transactions | Users act without ETH; a relayer pays the gas | ⏳ |

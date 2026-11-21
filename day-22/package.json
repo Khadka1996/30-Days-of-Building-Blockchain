@@ -1,0 +1,31 @@
+{
+  "name": "day-22-nextjs-dapp",
+  "version": "1.0.0",
+  "description": "Day 22: Next.js dApp for the Week 1 contracts (to-do list, piggy bank) with wallet connect",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test && npm --prefix app run test:unit",
+    "lint": "solhint \"contracts/**/*.sol\"",
+    "chain": "hardhat node",
+    "deploy": "hardhat run scripts/deploy.js --network localhost",
+    "slither": "slither . --hardhat-ignore-compile",
+    "test:e2e": "npm --prefix app run test:e2e"
+  },
+  "author": "Manish Khadka",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.2",
+    "@nomicfoundation/hardhat-ethers": "^3.1.3",
+    "@nomicfoundation/hardhat-network-helpers": "^1.1.2",
+    "chai": "^4.5.0",
+    "ethers": "^6.17.0",
+    "fast-check": "^3.23.2",
+    "hardhat": "^2.22.17",
+    "solc": "^0.8.24",
+    "solhint": "^5.2.0"
+  },
+  "private": true
+}

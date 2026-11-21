@@ -1,0 +1,581 @@
+{
+  "chainId": 31337,
+  "contracts": {
+    "TodoList": {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "id",
+              "type": "uint64"
+            }
+          ],
+          "name": "AlreadyCompleted",
+          "type": "error"
+        },
+        {
+          "inputs": [],
+          "name": "EmptyText",
+          "type": "error"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "id",
+              "type": "uint64"
+            }
+          ],
+          "name": "TaskNotFound",
+          "type": "error"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "length",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "max",
+              "type": "uint256"
+            }
+          ],
+          "name": "TextTooLong",
+          "type": "error"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "max",
+              "type": "uint256"
+            }
+          ],
+          "name": "TooManyTasks",
+          "type": "error"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint64",
+              "name": "id",
+              "type": "uint64"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "text",
+              "type": "string"
+            }
+          ],
+          "name": "TaskAdded",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint64",
+              "name": "id",
+              "type": "uint64"
+            }
+          ],
+          "name": "TaskCompleted",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint64",
+              "name": "id",
+              "type": "uint64"
+            }
+          ],
+          "name": "TaskDeleted",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "MAX_TASKS",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "MAX_TEXT_LENGTH",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "text",
+              "type": "string"
+            }
+          ],
+          "name": "addTask",
+          "outputs": [
+            {
+              "internalType": "uint64",
+              "name": "id",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "id",
+              "type": "uint64"
+            }
+          ],
+          "name": "completeTask",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "id",
+              "type": "uint64"
+            }
+          ],
+          "name": "deleteTask",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "uint64",
+              "name": "id",
+              "type": "uint64"
+            }
+          ],
+          "name": "getTask",
+          "outputs": [
+            {
+              "components": [
+                {
+                  "internalType": "uint64",
+                  "name": "id",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "createdAt",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "completed",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "string",
+                  "name": "text",
+                  "type": "string"
+                }
+              ],
+              "internalType": "struct TodoList.Task",
+              "name": "",
+              "type": "tuple"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "name": "getTasks",
+          "outputs": [
+            {
+              "components": [
+                {
+                  "internalType": "uint64",
+                  "name": "id",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "createdAt",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "completed",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "string",
+                  "name": "text",
+                  "type": "string"
+                }
+              ],
+              "internalType": "struct TodoList.Task[]",
+              "name": "",
+              "type": "tuple[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "name": "taskCount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        }
+      ]
+    },
+    "PiggyBank": {
+      "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "currentUnlockAt",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "requested",
+              "type": "uint64"
+            }
+          ],
+          "name": "CannotShortenLock",
+          "type": "error"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "currentUnlockAt",
+              "type": "uint64"
+            }
+          ],
+          "name": "LockAlreadySet",
+          "type": "error"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "unlockAt",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxUnlockAt",
+              "type": "uint256"
+            }
+          ],
+          "name": "LockTooLong",
+          "type": "error"
+        },
+        {
+          "inputs": [],
+          "name": "NoActiveBank",
+          "type": "error"
+        },
+        {
+          "inputs": [],
+          "name": "NothingToWithdraw",
+          "type": "error"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "unlockAt",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint256",
+              "name": "nowTs",
+              "type": "uint256"
+            }
+          ],
+          "name": "StillLocked",
+          "type": "error"
+        },
+        {
+          "inputs": [],
+          "name": "TransferFailed",
+          "type": "error"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "unlockAt",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint256",
+              "name": "nowTs",
+              "type": "uint256"
+            }
+          ],
+          "name": "UnlockNotInFuture",
+          "type": "error"
+        },
+        {
+          "inputs": [],
+          "name": "ZeroDeposit",
+          "type": "error"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "newBalance",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint64",
+              "name": "unlockAt",
+              "type": "uint64"
+            }
+          ],
+          "name": "Deposited",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint64",
+              "name": "oldUnlockAt",
+              "type": "uint64"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint64",
+              "name": "newUnlockAt",
+              "type": "uint64"
+            }
+          ],
+          "name": "LockExtended",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Withdrawn",
+          "type": "event"
+        },
+        {
+          "inputs": [],
+          "name": "MAX_LOCK_DURATION",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "unlockAt",
+              "type": "uint64"
+            }
+          ],
+          "name": "deposit",
+          "outputs": [],
+          "stateMutability": "payable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "newUnlockAt",
+              "type": "uint64"
+            }
+          ],
+          "name": "extendLock",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "name": "getBank",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "balance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "unlockAt",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "name": "timeLeft",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalLocked",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "withdraw",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    }
+  }
+}
