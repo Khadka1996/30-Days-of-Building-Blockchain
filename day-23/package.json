@@ -1,0 +1,37 @@
+{
+  "name": "day-23-reading-events",
+  "version": "1.0.0",
+  "description": "Day 23: a live activity feed and a reorg-safe event indexer for the Day 1 to-do list and Day 2 piggy bank",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "lint": "solhint \"contracts/**/*.sol\"",
+    "chain": "hardhat node",
+    "deploy": "hardhat run scripts/deploy.js --network localhost",
+    "activity": "hardhat run scripts/activity.js --network localhost",
+    "demo:reorg": "hardhat run scripts/reorg-demo.js --network localhost",
+    "feed": "node indexer/server.js",
+    "slither": "slither . --hardhat-ignore-compile"
+  },
+  "author": "Manish Khadka",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.2",
+    "@nomicfoundation/hardhat-ethers": "^3.1.3",
+    "@nomicfoundation/hardhat-network-helpers": "^1.1.2",
+    "chai": "^4.5.0",
+    "ethers": "^6.17.0",
+    "fast-check": "^3.23.2",
+    "hardhat": "^2.22.17",
+    "playwright": "1.63.0",
+    "solc": "^0.8.24",
+    "solhint": "^5.2.0"
+  },
+  "dependencies": {
+    "viem": "^2.58.4"
+  },
+  "private": true
+}

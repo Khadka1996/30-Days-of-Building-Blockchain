@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activity feed — Day 23</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>Live activity feed</h1>
+    <p class="sub">Day 1 to-do list + Day 2 piggy bank, read from contract events</p>
+    <div class="stats">
+      <span>Chain <b id="chain">–</b></span>
+      <span>Head <b id="head">–</b></span>
+      <span>Indexed to <b id="cursor">–</b></span>
+      <span>Events <b id="total">0</b></span>
+      <span id="sync" class="dot">connecting…</span>
+    </div>
+  </header>
+  <main>
+    <div id="reorg" class="reorg" hidden></div>
+    <div id="error" class="error" hidden></div>
+    <ul id="feed" aria-live="polite"></ul>
+    <p id="empty" class="empty">No activity yet. Add a task or lock some ETH.</p>
+  </main>
+  <script src="/feed.js"></script>
+</body>
+</html>
