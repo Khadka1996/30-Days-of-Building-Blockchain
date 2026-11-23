@@ -1,0 +1,4 @@
+{
+  "filter_paths": "contracts/test|node_modules",
+  "detectors_to_exclude": "timestamp"
+}

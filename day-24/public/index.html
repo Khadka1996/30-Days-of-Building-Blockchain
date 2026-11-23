@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in with Ethereum — Day 24</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <h1>My to-do list</h1>
+    <p class="sub">Day 24 · log in with your wallet instead of a password</p>
+
+    <section id="signed-out" hidden>
+      <p>Your wallet signs a short message that names <strong>this site</strong> and a one-time code. No password, no transaction, no gas.</p>
+      <button id="login">Sign in with Ethereum</button>
+    </section>
+
+    <section id="signed-in" hidden>
+      <p>Signed in as <code id="who"></code><br><small>Session ends at <span id="until"></span></small></p>
+      <h2>Your tasks (from the Day 1 contract)</h2>
+      <ul id="tasks"></ul>
+      <button id="logout" class="secondary">Sign out</button>
+    </section>
+
+    <p id="status" role="status" aria-live="polite"></p>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+:root { --bg: #0b1f3a; --card: #132d52; --text: #f8fafc; --muted: #a9b8cf; --accent: #f59e0b; --ok: #34d399; --err: #f87171; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--text); font: 16px/1.5 Inter, system-ui, sans-serif; display: flex; justify-content: center; padding: 48px 16px; }
+main { width: 100%; max-width: 560px; background: var(--card); border-radius: 16px; padding: 28px; }
+h1 { margin: 0; font-size: 28px; } h2 { font-size: 18px; margin-top: 24px; }
+.sub { color: var(--muted); margin-top: 4px; }
+button { background: var(--accent); color: #111; border: 0; border-radius: 10px; padding: 12px 20px; font-weight: 700; font-size: 16px; cursor: pointer; }
+button:disabled { opacity: .6; cursor: wait; } button.secondary { background: transparent; color: var(--text); border: 1px solid var(--muted); }
+code { color: var(--accent); word-break: break-all; }
+ul { padding-left: 0; list-style: none; } li { padding: 6px 0; border-bottom: 1px solid #1f3d66; }
+#status { min-height: 24px; color: var(--muted); } #status.ok { color: var(--ok); } #status.error { color: var(--err); }
