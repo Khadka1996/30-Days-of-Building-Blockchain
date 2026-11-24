@@ -81,7 +81,7 @@ Simplified teaching versions; each README explains what a real protocol adds.
 | 22 | [Next.js dApp](day-22) | A web app for the Week 1 contracts with wallet connect | ✅ |
 | 23 | [Reading events](day-23) | A live activity feed and simple indexer | ✅ |
 | 24 | [Sign in with Ethereum](day-24) | Log in with a wallet instead of a password | ✅ |
-| 25 | Gasless transactions | Users act without ETH; a relayer pays the gas | ⏳ |
+| 25 | [Gasless transactions](day-25) | Users act without ETH; a relayer pays the gas | ✅ |
 | 26 | Layer 2 & cross-chain | Compare costs on two chains and send messages between them | ⏳ |
 | 27 | Monitoring & alerts | A dashboard that watches a contract and flags unusual activity | ⏳ |
 

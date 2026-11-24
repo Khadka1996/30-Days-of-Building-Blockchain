@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gasless To-Do — Day 25</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="badge">Day 25 / 30</p>
+      <h1>Gasless to-do list</h1>
+      <p class="lead">Sign with your wallet, the relayer pays the gas. You need <strong>0 ETH</strong>.</p>
+    </header>
+
+    <section id="signed-out">
+      <button id="connect">Connect wallet</button>
+    </section>
+
+    <section id="app" hidden>
+      <p class="who">Wallet <code id="who"></code> · balance <span id="balance"></span> ETH · next nonce <span id="nonce"></span></p>
+      <form id="add">
+        <input id="text" maxlength="280" placeholder="New task, e.g. Pay electricity bill" autocomplete="off" required>
+        <button type="submit">Add (free)</button>
+      </form>
+      <ul id="tasks"></ul>
+    </section>
+
+    <p id="status" role="status"></p>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
