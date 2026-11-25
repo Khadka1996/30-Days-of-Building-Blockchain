@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day 26 — Two chains</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+  <p class="badge">DAY 26 / 30</p>
+  <h1>Layer 2 &amp; cross-chain</h1>
+  <p class="lead">Two local chains. Send a task from one to the other and watch it arrive after 2 confirmations and 2 of 3 validator signatures.</p>
+
+  <section class="chains">
+    <div class="chain"><b>L1</b> chain <span id="l1-id">…</span> · block <span id="l1-block">…</span></div>
+    <div class="chain"><b>L2</b> chain <span id="l2-id">…</span> · block <span id="l2-block">…</span></div>
+  </section>
+
+  <h2>Same action, two chains</h2>
+  <p class="note" id="prices"></p>
+  <table id="costs">
+    <thead><tr><th>Action</th><th>Gas</th><th>L1</th><th>L2</th><th>Cheaper</th></tr></thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>Send a task across</h2>
+  <form id="send">
+    <input id="text" maxlength="280" placeholder="e.g. Pay the electricity bill" required>
+    <select id="direction"><option value="l1-l2">L1 → L2</option><option value="l2-l1">L2 → L1</option></select>
+    <button id="go" type="submit">Send</button>
+  </form>
+  <p id="status"></p>
+  <ul id="messages"></ul>
+
+  <h2>Arrived tasks</h2>
+  <div class="cols">
+    <div><h3>On L2 (from L1)</h3><ul id="tasks-l2"></ul></div>
+    <div><h3>On L1 (from L2)</h3><ul id="tasks-l1"></ul></div>
+  </div>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
