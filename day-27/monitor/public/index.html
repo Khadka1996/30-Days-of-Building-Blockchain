@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vault Monitor — Day 27</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>Vault Monitor</h1>
+    <span id="status" class="pill">connecting…</span>
+  </header>
+  <main>
+    <section class="tiles">
+      <div class="tile"><span>In the vault</span><b id="tvl">–</b></div>
+      <div class="tile"><span>Left today (limit)</span><b id="limit">–</b></div>
+      <div class="tile"><span>Vault</span><b id="paused">–</b></div>
+      <div class="tile"><span>Open alerts (critical / high)</span><b id="open">–</b></div>
+    </section>
+    <section>
+      <h2>Queued admin changes</h2>
+      <ul id="pending" class="plain"></ul>
+    </section>
+    <section>
+      <h2>Alerts</h2>
+      <table>
+        <thead><tr><th>Severity</th><th>Rule</th><th>What happened</th><th>Response</th><th>Block</th></tr></thead>
+        <tbody id="alerts"></tbody>
+      </table>
+    </section>
+    <p class="meta" id="meta"></p>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

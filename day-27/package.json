@@ -1,0 +1,33 @@
+{
+  "name": "day-27-monitoring-alerts",
+  "version": "1.0.0",
+  "description": "Day 27: Monitoring & alerts — a vault built to be watched (timelocked admin, guardian pause, net daily limit) and a viem monitor + dashboard that flags admin key misuse and unusual withdrawals",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "lint": "solhint \"contracts/**/*.sol\"",
+    "demo": "hardhat run scripts/demo.js",
+    "app": "hardhat run scripts/app.js",
+    "slither": "slither . --hardhat-ignore-compile",
+    "planted-bugs": "python3 scripts/planted-bugs.py"
+  },
+  "author": "Manish Khadka",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.2",
+    "@nomicfoundation/hardhat-ethers": "^3.1.4",
+    "@nomicfoundation/hardhat-network-helpers": "^1.1.2",
+    "@openzeppelin/contracts": "^5.0.2",
+    "chai": "^4.5.0",
+    "ethers": "^6.17.0",
+    "fast-check": "^3.23.2",
+    "hardhat": "^2.22.17",
+    "playwright": "1.63",
+    "solc": "^0.8.24",
+    "solhint": "^5.2.0"
+  },
+  "dependencies": {
+    "viem": "^2.58.7"
+  },
+  "private": true
+}

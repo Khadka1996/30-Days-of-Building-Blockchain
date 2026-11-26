@@ -1,0 +1,21 @@
+:root { --bg: #0b1f3a; --panel: #13294a; --line: #22406b; --ink: #fff; --muted: #8fa3c2; --accent: #f59e0b; --crit: #ef4444; --high: #f97316; --med: #eab308; --info: #60a5fa; --ok: #22c55e; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 Inter, system-ui, sans-serif; }
+header { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border-bottom: 1px solid var(--line); }
+h1 { margin: 0; font-size: 22px; } h1::before { content: "◆ "; color: var(--accent); }
+h2 { font-size: 16px; margin: 24px 0 8px; color: var(--muted); font-weight: 600; }
+main { padding: 16px 24px 40px; max-width: 1200px; margin: 0 auto; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.tile { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.tile span { display: block; color: var(--muted); font-size: 13px; } .tile b { font-size: 22px; }
+.pill { padding: 4px 12px; border-radius: 99px; background: var(--panel); font-size: 13px; }
+.good { color: var(--ok); } .bad { color: var(--crit); } .muted { color: var(--muted); }
+.plain { list-style: none; padding: 0; margin: 0; } .plain li { padding: 6px 0; word-break: break-all; }
+table { width: 100%; border-collapse: collapse; background: var(--panel); border-radius: 12px; overflow: hidden; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; font-size: 13px; }
+td.sev { font-weight: 700; text-transform: uppercase; font-size: 12px; white-space: nowrap; } td.rule { font-family: ui-monospace, monospace; font-size: 13px; }
+.sev-critical td.sev { color: var(--crit); } .sev-high td.sev { color: var(--high); } .sev-medium td.sev { color: var(--med); } .sev-info td.sev { color: var(--info); }
+.sev-critical { box-shadow: inset 4px 0 0 var(--crit); }
+.meta { color: var(--muted); font-size: 12px; margin-top: 16px; word-break: break-all; }
+@media (max-width: 700px) { th:nth-child(4), td:nth-child(4), th:nth-child(5), td:nth-child(5) { display: none; } }
