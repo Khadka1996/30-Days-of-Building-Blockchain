@@ -1,0 +1,28 @@
+{
+  "name": "pramaan-capstone",
+  "version": "1.0.0",
+  "description": "Pramaan (प्रमाण): tamper-proof academic certificate verification for Nepal — capstone of 30 Days of Building Blockchain",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "lint": "solhint \"contracts/**/*.sol\"",
+    "demo": "hardhat run scripts/demo.js",
+    "slither": "slither . --hardhat-ignore-compile",
+    "planted-bugs": "python3 scripts/planted-bugs.py"
+  },
+  "author": "Manish Khadka",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.2",
+    "@nomicfoundation/hardhat-ethers": "^3.1.4",
+    "@nomicfoundation/hardhat-network-helpers": "^1.1.2",
+    "@openzeppelin/contracts": "^5.0.2",
+    "chai": "^4.5.0",
+    "ethers": "^6.17.0",
+    "fast-check": "^3.23.2",
+    "hardhat": "^2.22.17",
+    "solc": "^0.8.24",
+    "solhint": "^5.2.0"
+  }
+}
