@@ -1,14 +1,19 @@
 {
   "name": "pramaan-capstone",
   "version": "1.0.0",
-  "description": "Pramaan (प्रमाण): tamper-proof academic certificate verification for Nepal — capstone of 30 Days of Building Blockchain",
+  "description": "Pramaan (प्रमाण): tamper-proof academic certificate verification for Nepal — contracts, web app and deploy kit (capstone of 30 Days of Building Blockchain)",
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
     "lint": "solhint \"contracts/**/*.sol\"",
     "demo": "hardhat run scripts/demo.js",
     "slither": "slither . --hardhat-ignore-compile",
-    "planted-bugs": "python3 scripts/planted-bugs.py"
+    "planted-bugs": "python3 scripts/planted-bugs.py",
+    "build:app": "node app/build.js",
+    "app": "hardhat run scripts/app.js",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "council": "hardhat run scripts/council.js"
   },
   "author": "Manish Khadka",
   "license": "MIT",
@@ -17,12 +22,20 @@
     "@nomicfoundation/hardhat-chai-matchers": "^2.1.2",
     "@nomicfoundation/hardhat-ethers": "^3.1.4",
     "@nomicfoundation/hardhat-network-helpers": "^1.1.2",
+    "@nomicfoundation/hardhat-verify": "^2.1.4",
     "@openzeppelin/contracts": "^5.0.2",
     "chai": "^4.5.0",
+    "esbuild": "^0.24.2",
     "ethers": "^6.17.0",
     "fast-check": "^3.23.2",
     "hardhat": "^2.22.17",
+    "jsqr": "1.4",
+    "playwright": "^1.63.0",
+    "qrcode": "1.5",
     "solc": "^0.8.24",
     "solhint": "^5.2.0"
+  },
+  "dependencies": {
+    "viem": "^2.58.8"
   }
 }

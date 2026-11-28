@@ -90,7 +90,7 @@ Simplified teaching versions; each README explains what a real protocol adds.
 | Day | Project | What I build | Status |
 |----:|---------|--------------|:------:|
 | 28 | [Capstone, part 1](day-28) | Design and contracts for a dApp for a real problem in Nepal | ✅ |
-| 29 | Capstone, part 2 | The web app, end-to-end tests and a deploy kit | ⏳ |
+| 29 | [Capstone, part 2](day-29) | The web app, end-to-end tests and a deploy kit | ✅ |
 | 30 | Capstone, part 3 | Self-audit, live demo on a test network, 30-day wrap-up | ⏳ |
 
 ## How it runs

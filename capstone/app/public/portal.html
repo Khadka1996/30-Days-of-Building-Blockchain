@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Pramaan — institution portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="build/portal.js"></script>
+</head>
+<body>
+  <header><a class="brand" href="index.html">Pramaan <span>प्रमाण</span></a><span id="network" class="net"></span></header>
+  <main>
+    <h1>Institution portal</h1>
+    <section class="panel">
+      <h2>1 · Connect the institution's key</h2>
+      <div class="row">
+        <button id="connect">Connect wallet</button>
+        <button id="switch" hidden>Switch network</button>
+      </div>
+      <div id="dev" class="row" hidden>
+        <select id="dev-account" aria-label="Local test account"></select>
+        <button id="dev-connect">Use local test wallet</button>
+      </div>
+      <p class="small">Account: <code id="account">not connected</code></p>
+      <p id="wallet-status" class="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2>2 · Upload the results (CSV)</h2>
+      <p class="small">Columns: <code>certNo, name, dateOfBirth, program, result, issuedOn</code>. The file is read in this browser only; it is never uploaded.</p>
+      <input id="csv" type="file" accept=".csv,text/csv" aria-label="Results CSV">
+      <p id="csv-status" class="status"></p>
+      <ul id="errors" class="errors"></ul>
+      <div class="scroll"><table id="preview"></table></div>
+      <p class="small">Merkle root: <code id="root">—</code></p>
+    </section>
+
+    <section class="panel">
+      <h2>3 · Back up, then publish</h2>
+      <div class="row">
+        <button id="backup" disabled>Download backup (required)</button>
+        <button id="publish" class="primary" disabled>Publish on the blockchain</button>
+      </div>
+      <p id="backup-status" class="status"></p>
+      <p id="publish-status" class="status"></p>
+      <div id="result" hidden>
+        <p>Batch <strong id="batch-id"></strong> is live. Print each certificate's QR code from its <code>verifyLink</code>.</p>
+        <button id="pack" class="primary">Download certificate pack (CSV)</button>
+        <div id="qrs" class="qrs"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Rebuild a lost pack</h2>
+      <div class="row">
+        <input id="restore-file" type="file" accept=".json,application/json" aria-label="Backup file">
+        <input id="restore-batch" type="number" min="1" placeholder="batch #" aria-label="Batch number">
+        <button id="restore" disabled>Rebuild</button>
+      </div>
+      <p id="restore-status" class="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Revoke a certificate</h2>
+      <div class="row">
+        <input id="revoke-no" type="text" placeholder="certificate number" autocomplete="off" aria-label="Certificate number">
+        <select id="revoke-reason" aria-label="Reason">
+          <option value="1">fraud</option>
+          <option value="2">error, re-issued with a new number</option>
+          <option value="3">withdrawn by the institution</option>
+        </select>
+        <button id="revoke" disabled>Revoke</button>
+      </div>
+      <p id="revoke-status" class="status"></p>
+    </section>
+  </main>
+</body>
+</html>

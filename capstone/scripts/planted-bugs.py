@@ -12,6 +12,9 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 C, L = "contracts/Pramaan.sol", "lib/pramaan.js"
 T, LT = "test/Pramaan.test.js", "test/lib.test.js"
+# Day 29: the web app
+V, PO, CH, CO, SV = "app/src/verify.js", "app/src/portal.js", "app/src/chain.js", "app/src/codec.js", "app/server.js"
+E, AT = "test/e2e.test.js", "test/app.test.js"
 
 BUGS = [
     # (name, file, old, new, test file)
@@ -61,6 +64,35 @@ BUGS = [
      'return keccak256(toUtf8Bytes(issuerId + values.join("") + salt));', LT),
     ("duplicate serials allowed in a batch", L,
      "if (seen.has(serial)) throw new Error(`duplicate serial in batch: ${serial}`);", "", LT),
+    # ── Day 29: web app ──
+    ("verifier trusts the institution id in the QR (F-5)", V,
+     "if (Number(batchIssuer) !== p.issuerId) {", "if (false) {", E),
+    ("verifier writes QR text as HTML (XSS)", V,
+     "tr.insertCell().textContent = v;", "tr.insertCell().innerHTML = v;", E),
+    ("forged certificate's claimed details are shown", V,
+     'if (name !== "Unknown") {', "if (true) {", E),
+    ("RPC outage reported as a fake certificate", V,
+     'show("error", "COULD NOT CHECK"', 'show("unknown", "NOT FOUND"', E),
+    ("no warning for a QR that points to another website", V,
+     "if (host !== location.host) {", "if (false) {", E),
+    ("publish allowed before the salts are backed up", PO,
+     "!prepared || !backupSaved;", "!prepared;", E),
+    ("double click publishes twice", PO,
+     "busy = true; // one click = one transaction", "// one click = one transaction", E),
+    ("rebuilt pack not checked against the chain", PO,
+     "if (root !== tree.root ||", "if (false) if (root !== tree.root ||", E),
+    ("wrong network not detected", CH,
+     "rightChain: chainId === cfg.chainId", "rightChain: true", E),
+    ("duplicate certificate numbers allowed in the CSV", CO,
+     "if (cert.certNo && seen.has(key)) errors.push", "if (false) errors.push", AT),
+    ("spreadsheet formulas left live in the pack (CSV injection)", CO,
+     "if (/^[=+\\-@\\t\\r]/.test(s)) s = \"'\" + s;", "", AT),
+    ("salt of any length accepted from a QR", CO,
+     'if (b.length !== 32) throw new Error("expected 32 bytes");', "", AT),
+    ("server answers any Host (DNS rebinding)", SV,
+     'if (!allowedHost.test(req.headers.host || "")) return send(403, "forbidden host");', "", E),
+    ("server serves files outside public/ (path traversal)", SV,
+     "!file.startsWith(PUBLIC + path.sep) || ", "", E),
 ]
 
 

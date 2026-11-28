@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Pramaan — check a certificate</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="build/verify.js"></script>
+</head>
+<body>
+  <header><a class="brand" href="index.html">Pramaan <span>प्रमाण</span></a><span id="network" class="net"></span></header>
+  <main>
+    <h1>Check a certificate</h1>
+    <section class="panel">
+      <label class="button" for="qr-file">📷 Scan or upload the QR code</label>
+      <input id="qr-file" type="file" accept="image/*" capture="environment" hidden>
+      <form id="paste-form" class="row">
+        <input id="paste" type="text" placeholder="…or paste the verify link" autocomplete="off" aria-label="Verify link">
+        <button type="submit">Check</button>
+      </form>
+    </section>
+    <p id="warning" class="warning" hidden></p>
+    <section id="answer" class="answer" hidden aria-live="polite">
+      <h2 id="answer-title"></h2>
+      <p id="answer-text"></p>
+      <table id="details"></table>
+    </section>
+    <p class="small">The answer comes straight from the blockchain. The certificate's details travel only inside the link's <code>#</code> part, which your browser never sends to any server.</p>
+  </main>
+</body>
+</html>

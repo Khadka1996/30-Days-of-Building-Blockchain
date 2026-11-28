@@ -77,10 +77,11 @@ Known limits are listed in [`day-28/QA.md`](../day-28/QA.md).
 
 - [`contracts/Pramaan.sol`](contracts/Pramaan.sol): the registry (council, institutions, single and batch issue, revoke, verify, compromise windows).
 - [`lib/pramaan.js`](lib/pramaan.js): how an institution makes `serial`, `docHash` and a batch tree (ethers only).
-- [`test/`](test/): 38 tests: contract, lib, fuzz.
-- [`scripts/demo.js`](scripts/demo.js): the full story on a local chain. [`scripts/planted-bugs.py`](scripts/planted-bugs.py): 22 planted bugs the tests must catch.
+- [`app/`](app/): the web app (Day 29): verifier page, institution portal, QR payload and CSV reader.
+- [`test/`](test/): 58 tests: contract, lib, fuzz, app, end-to-end in Chromium.
+- [`scripts/demo.js`](scripts/demo.js): the contract story on a local chain. [`scripts/planted-bugs.py`](scripts/planted-bugs.py): 36 planted bugs the tests must catch. [`DEPLOY.md`](DEPLOY.md): the Sepolia deploy kit.
 
 ## 7. Next
 
-- **Day 29:** the web app (an institution portal to publish a CSV of results and a verifier page that scans the QR code), end-to-end browser tests and a deploy kit.
+- **Day 29 (done):** the web app (an institution portal that publishes a CSV of results and a verifier page that scans the QR code), end-to-end browser tests and a deploy kit. The QR link carries the certificate in its `#fragment`, and the verifier shows the batch's **on-chain** owner, never the institution claimed in the QR ([day-29/QA.md](../day-29/QA.md), F-5).
 - **Day 30:** a full self-audit report (`AUDIT.md`), a live test-network demo and the 30-day wrap-up.
